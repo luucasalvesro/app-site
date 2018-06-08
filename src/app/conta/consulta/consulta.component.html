@@ -1,0 +1,30 @@
+
+<h3>{{titulo}}</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Saldo</th>
+        <th>Data de Abertura da Conta</th>
+        <th>Editar</th>
+        <th>Excluir</th>
+    </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let conta of contas; let i = index;">
+        <td>{{ conta.id }}</td>        
+        <td>{{ conta.nome }}</td>        
+        <td>{{ conta.saldo }}</td>
+        <td>{{ conta.dataconta }}</td>
+        <td><a (click)="editar(conta.id);">Editar</a></td>
+        <td><a (click)="excluir(conta.id, i);">Excluir</a></td>
+        </tr>
+        <tr>
+           <td colspan="6" style="text-align: right;">Total de Registros: {{ contas.length }}</td> 
+        </tr>
+    </tbody>
+</table>
+      

@@ -1,0 +1,25 @@
+
+
+<form (ngSubmit)="salvar()">   
+    
+    <br/>
+    <h3>{{titulo}}</h3>
+    
+    <label>Id:
+        <input type="input" name="id" size="20" [(ngModel)]="conta.id"/>
+    </label><br/><br/>
+
+    <label>Nome:
+        <input type="input" name="nome" size="30" [(ngModel)]="conta.nome"/>
+    </label><br/><br/>
+
+    <label>Saldo:
+        <input type="input" name="saldo" size="10" [(ngModel)]="conta.saldo"/>
+    </label><br/><br/>
+
+    <label>Data:
+        <input type="input" name="dataconta" size="15" [(ngModel)]="conta.data"/>
+    </label><br/><br/>
+
+    <button type="submit">Salvar</button>
+</form>
